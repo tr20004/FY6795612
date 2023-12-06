@@ -188,6 +188,84 @@ Throughout those transitions, even seemingly minor adjustments in vehicle aerody
       </pre>
       </p>
 
+
+
+
+      <h2> Conference Presentation: Unveiling the evolution- Aerodynamics' pivotal role in transforming formula 1 cars from the 1800s to now </h2>
+      <script> 
+      // Array of slide images 
+        var slideImages = ["slide 1.jpg", "slide 2.jpg", "slide 3.jpg", "slide 4.jpg", "slide 5.jpg"];
+        var currentSlide = 0; 
+        function showSlide() {
+          document.getElementById('slide').src = slideImages[currentSlide];
+        }
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slideImages.length; 
+          showSlide();
+        }
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length; 
+          showSlide();
+        }
+
+        //function to show a specific slide based on the button clicked 
+        function showSlideNumber(slideNumber) {
+          currentSlide = SlideNumber - 1;
+          showSlide();
+        }
+
+        //call showSlide() to display the first slide
+        showSlide(); 
+      </script>
+
+      // button 
+      <div class="button-container">
+        <button class="button" onclick="prevSlide()">Previous</button>
+        <button class="button" onclick="nextSlide()">Next</button>
+      </div>
+
+      <div class="slide-number-container">
+        <button class="button" onclick="showSlideNumber(1)">1</button>
+        <button class="button" onclick="showSlideNumber(2)">2</button>
+        <button class="button" onclick="showSlideNumber(3)">3</button>
+        <button class="button" onclick="showSlideNumber(4)">4</button>
+        <button class="button" onclick="showSlideNumber(5)">5</button>
+      </div>
+
+      <style>
+        #slide-container {
+          text-align: center;
+          position: relative;
+        }
+
+        .button-container {
+          position: absolute;
+          button: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          margin-botton: -100px;
+        }
+
+        .button {
+          padding: 10px 20px;
+          background-color: #4CAF50;
+          colour: white;
+          border: none; 
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer; 
+          margin: 0 5px; 
+        }
+
+        .slide-number-container {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          margin-bottom: -50px;
+        }
+        
+      </style>
         
   </head>
       
